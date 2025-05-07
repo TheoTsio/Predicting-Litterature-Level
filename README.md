@@ -18,7 +18,7 @@ Early identification of children at risk for literacy difficulties is critical f
 >month={Feb}  
 >}
 
-**Our team <3:**
+**Our team <3:**  
 T.Tsiolakis 	  ttsiolak@ee.duth.gr, 		https://orcid.org/0009-0004-7951-633X  
 D. Economacou   doikonomakou@uniwa.gr, 	https://orcid.org/0000-0001-8781-7969  
 E. Penderi 	    ependeri@psed.duth.gr, 	https://orcid.org/0000-0002-8054-6462  
