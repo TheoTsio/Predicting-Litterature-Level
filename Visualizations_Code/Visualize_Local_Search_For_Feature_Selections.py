@@ -9,8 +9,7 @@ f1_scores = [
     0.5866, 0.6085, 0.5806, 0.6413, 0.6154, 0.5440, 0.5541, 0.5868, 0.5760, 0.5740, 0.5880, 0.5924, 0.6011, 0.5542, 0.5897, 0.5540, 0.5890, 0.5986, 0.6413,
     0.6301, 0.6043, 0.5780, 0.6941, 0.6123, 0.6151, 0.6375, 0.6301, 0.5886, 0.6299, 0.6471, 0.6306, 0.6204, 0.5947, 0.6156, 0.6113, 0.6941,
     0.6726, 0.6709, 0.6869, 0.6812, 0.6372, 0.6997, 0.6875, 0.6512, 0.6846, 0.7090, 0.7195, 0.6538, 0.6869, 0.7031, 0.6641, 0.7195,
-    0.6722, 0.6519, 0.6700, 0.6536, 0.6539, 0.6700, 0.6771, 0.6511, 0.6647, 0.6823, 0.6266, 0.6664, 0.6700, 0.6839, 0.6413, 0.7195,
-    0.6771, 0.6676, 0.6666, 0.6700, 0.6297, 0.6700, 0.6507, 0.6334, 0.6541, 0.6920, 0.6630, 0.6666, 0.6876, 0.6329, 0.6624
+    0.6722, 0.6519, 0.6700, 0.6536, 0.6539, 0.6700, 0.6771, 0.6511, 0.6647, 0.6823, 0.6266, 0.6664, 0.6700, 0.6839, 0.6413
 ]
 
 # Peaks for annotations (only those you want to display)
@@ -90,27 +89,12 @@ A + HOURSMOTHER + HOURSFATHER + hoursworkmother + BIRTHORDER
 A + HOURSMOTHER + HOURSFATHER + hoursworkmother + GESTWEEK
 A + HOURSMOTHER + HOURSFATHER + hoursworkmother + SEX
 A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY
-A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY + NR_CHILDREN 
-A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY + BIRTHORDER 
-A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY + TOTAL_HLE
-A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY + NRBOOKS 
-A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY + TOTAL_ISBR 
-A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY + EDUCATION_1 
-A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY + EDUCATION_2 
-A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY + WORKSTATUS_1 
-A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY + WORKSTATUS_2
-A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY + hoursworkmother 
-A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY + hoursworkfather 
-A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY + ECONOMIC
-A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY + BIRTHORDER
-A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY + GESTWEEK
-A + HOURSMOTHER + HOURSFATHER + hoursworkmother + URBANITY + SEX
 """
 
 feature_combinations = feature_combinations_str.split('\n')
 
 # Identify the end indices of each round
-round_ends = [19, 36, 52, 68, 83]
+round_ends = [19, 36, 52, 67]
 
 # Plotting
 plt.figure(figsize=(12, 6))
@@ -124,7 +108,7 @@ for end in round_ends:
     plt.axvline(x=end, color='#17becf', linestyle='-', alpha=1)
 
 # Add round labels
-round_labels = ["Round 0", "Round 1", "Round 2", "Round 3", "Round 4"]
+round_labels = ["Round 0", "Round 1", "Round 2", "Round 3"]
 for i, end in enumerate(round_ends):
     plt.text(end-2.6, 0.54, round_labels[i], color='#333333', ha='center', va='bottom', fontsize=10)
 
@@ -151,3 +135,4 @@ plt.tight_layout()
 plt.grid(True, linestyle="-", alpha=0.3)
 
 plt.savefig("Results\local_search_result.pdf", format="pdf", bbox_inches="tight")
+plt.show()
