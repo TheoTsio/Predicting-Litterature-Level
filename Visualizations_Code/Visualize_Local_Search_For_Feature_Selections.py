@@ -15,9 +15,9 @@ f1_scores = [
 
 # Peaks for annotations (only those you want to display)
 peaks = {
-    "HOURSMOTHER": (4, f1_scores[4]),
-    "HOURSFATHER": (23, f1_scores[23]),
-    "hoursworkmother": (47, f1_scores[47])
+    "HRS_M": (4, f1_scores[4]),
+    "HRS_F": (23, f1_scores[23]),
+    "HRSWORK_M": (47, f1_scores[47])
 }
 
 # Provided feature combinations
@@ -131,7 +131,7 @@ for i, end in enumerate(round_ends):
 # Annotate only selected peaks
 for label, (idx, score) in peaks.items():
     plt.annotate(label, xy=(idx, score), textcoords="offset points", 
-                 xytext=(0,10), ha='center', fontsize=8, color="#333333", rotation=0)
+                 xytext=(0,9.5), ha='center', fontsize=8, color="#333333", rotation=0)
 
 # Add horizontal lines at the peaks
 for label in peaks:
