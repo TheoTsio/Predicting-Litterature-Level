@@ -122,11 +122,11 @@ for label in peaks:
     plt.axhline(y=peaks[label][1], color='purple', linestyle='--', alpha=1)
 
 # Add horizontal lines for best scores
-plt.text(x=len(f1_scores)-0.4, y=0.642 + 0.003, s='Best: Round 0', color='purple')
+plt.text(x=len(f1_scores)-0.4, y=f1_scores[4] + 0.003, s='Best: Round 0', color='purple')
 
-plt.text(x=len(f1_scores)-0.4, y=0.686 + 0.003, s='Best: Round 1', color='purple')
+plt.text(x=len(f1_scores)-0.4, y=f1_scores[23] + 0.003, s='Best: Round 1', color='purple')
 
-plt.text(x=len(f1_scores)-0.4, y=0.704 + 0.003, s='Best: Round 2', color='purple')
+plt.text(x=len(f1_scores)-0.4, y=f1_scores[47] + 0.003, s='Best: Round 2', color='purple')
 
 
 plt.legend()
